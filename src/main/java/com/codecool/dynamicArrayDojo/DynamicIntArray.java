@@ -39,7 +39,19 @@ class DynamicIntArray {
             }
         }
 
-    void insert(int index, int value){}
+    void insert(int index, int value) {
+        if (index > array.length - 1) {
+            add(value);
+        } else {
+
+            int[] newArray = new int[array.length + 1];
+            newArray[index] = value;
+
+            System.arraycopy(array, 0, newArray, 0, index);
+            System.arraycopy(array, index, newArray, index + 1, array.length - index);
+            this.array = newArray;
+        }
+    }
 
     @Override
     public String toString() {
