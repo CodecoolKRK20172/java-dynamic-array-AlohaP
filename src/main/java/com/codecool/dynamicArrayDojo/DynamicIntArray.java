@@ -19,7 +19,9 @@ class DynamicIntArray {
         int size = array.length-1;
         array[size] = value;
     }
-    void remove(int value){}
+    void remove(int index){
+        
+    }
     void insert(int index, int value){}
 
     @Override
