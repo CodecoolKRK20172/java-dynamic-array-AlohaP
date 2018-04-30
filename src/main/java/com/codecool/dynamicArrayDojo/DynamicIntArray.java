@@ -19,9 +19,26 @@ class DynamicIntArray {
         int size = array.length-1;
         array[size] = value;
     }
-    void remove(int index){
-        
-    }
+    void remove(int index) {
+        int actualSize = array.length;
+
+        if (index < 0 || index >= actualSize) {
+            throw new ArrayIndexOutOfBoundsException();
+        } else {
+            int[] newArray = new int[actualSize-1];
+            int newArrayIndex = 0;
+
+            for (int element : array) {
+
+                if (element != index) {
+                    newArray[newArrayIndex] = element;
+                    newArrayIndex++;
+                }
+            }
+            this.array = newArray;
+            }
+        }
+
     void insert(int index, int value){}
 
     @Override
