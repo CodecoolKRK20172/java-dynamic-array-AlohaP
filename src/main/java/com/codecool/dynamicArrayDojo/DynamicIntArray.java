@@ -1,6 +1,10 @@
 package com.codecool.dynamicArrayDojo;
 
-// put your code here!
-public class DynamicIntArray {
+class DynamicIntArray {
 
+    private int[] array;
+
+    DynamicIntArray(int arraySize) {
+        this.array = new int[arraySize];
+    }
 }
