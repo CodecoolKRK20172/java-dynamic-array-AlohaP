@@ -7,4 +7,8 @@ class DynamicIntArray {
     DynamicIntArray(int arraySize) {
         this.array = new int[arraySize];
     }
+
+    void add(int value){}
+    void remove(int value){}
+    void insert(int value){}
 }
